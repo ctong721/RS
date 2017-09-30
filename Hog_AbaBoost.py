@@ -1,4 +1,4 @@
-import os
+ï»¿import os
 import math
 from PIL import Image, ImageDraw
 import numpy as np
@@ -48,9 +48,7 @@ def getHOG(_images, _transform_sqrt):
                           orientations=9,  # number of bins
                           pixels_per_cell=(6, 6),  # pixel per cell
                           cells_per_block=(2, 2),  # cells per blcok
-                          # block_norm='L1',  # block norm : str {¡®L1¡¯, ¡®L1-sqrt¡¯, ¡®L2¡¯, ¡®L2-Hys¡¯}
-                          transform_sqrt=_transform_sqrt,
-                          # power law compression (also known as gamma correction) DO NOT use this if the image contains negative
+                          transform_sqrt=_transform_sqrt,  # power law compression (also known as gamma correction) DO NOT use this if the image contains negative
                           feature_vector=True,  # flatten the final vectors
                           visualise=False)  # return HOG map
         _x.append(features)
