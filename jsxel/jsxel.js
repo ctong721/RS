@@ -4,11 +4,13 @@ jsxel = {
 			"#FF004D","#FFA300","#FFEC27","#00E436",
 			"#29ADFF","#83769C","#FF77AB","#FFCCAA"],
 	size: 5,
+	
+	frame_count: 0,
 
 	random: function(start,end){
 		var temp = start - end + 1;
 		return Math.abs(Math.floor(Math.random()*temp)) + start;
-},
+	},
 
 	init: function(w,h,s){
 		this.size = s;
@@ -39,10 +41,14 @@ jsxel = {
 	cls: function(col){
 		//setTimeout(ctx.clearRect(0,0,c.width,c.height),100);
 		ctx.fillStyle = col;
-		setTimeout(ctx.fillRect(0,0,c.width,c.height),100);
+		//setTimeout(ctx.fillRect(0,0,c.width,c.height),100);
+		ctx.fillRect(0,0,c.width,c.height)
 	},
 	
 	run: function(f){
-		setInterval(f,100);
+		setInterval(function(){
+			f();
+			jsxel.frame_count++;
+		},100);
 	},
 };
