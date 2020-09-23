@@ -35,5 +35,14 @@ jsxel = {
 		ctx.strokeStyle = col;
 		ctx.strokeText(t,x,y);
 	},
+
+	cls: function(col){
+		//setTimeout(ctx.clearRect(0,0,c.width,c.height),100);
+		ctx.fillStyle = col;
+		setTimeout(ctx.fillRect(0,0,c.width,c.height),100);
+	},
 	
+	run: function(f){
+		setInterval(f,100);
+	},
 };

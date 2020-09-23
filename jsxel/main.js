@@ -1,8 +1,12 @@
 window.onload = function(){
-	jsxel.init(100,100,5);
-	for(i=1;i<10;i++){
-		for(j=1;j<10;j++){
-			jsxel.frect(i,j,5,5,jsxel.color[jsxel.random(0,15)]);
-		}
+	jsxel.init(61,51,6);
+	function draw(){
+		jsxel.cls("#ffffff");
+		for(i=0;i<60;i++){
+			for(j=0;j<50;j++){
+				jsxel.frect(i,j,1,1,jsxel.color[jsxel.random(0,15)]);
+			}	
+		}	
 	}
+	jsxel.run(draw);
 };
