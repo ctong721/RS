@@ -3,9 +3,9 @@ h = 110;
 x = 0;
 y = 0;
 p1 = f(w,h,10000,1000);
-user = [{'name':'u1','x':20,'y':25,'zt':1,'color':8,'eat':0},
-{'name':'u2','x':25,'y':20,'zt':1,'color':4,'eat':0},
-{'name':'u3','x':20,'y':20,'zt':1,'color':5,'eat':0}]
+user = [{'name':'u1','x':30,'y':40,'zt':1,'color':8,'eat':0},
+{'name':'u2','x':35,'y':50,'zt':1,'color':4,'eat':0},
+{'name':'u3','x':30,'y':60,'zt':1,'color':5,'eat':0}]
 
 function f(w,h,s,e){
 	var point = [];
@@ -105,11 +105,11 @@ window.onload = function(){
 			}
 		}
 		jsxel.text(10,30,jsxel.frame_count,jsxel.color[1])
-		jsxel.text(120,30,user[0].eat,jsxel.color[user[0].color])
-		jsxel.text(170,30,user[1].eat,jsxel.color[user[1].color])
-		jsxel.text(220,30,user[2].eat,jsxel.color[user[2].color])
-		jsxel.text(270,30,x,jsxel.color[1])
-		jsxel.text(320,30,y,jsxel.color[1])
+		jsxel.text(100,30,user[0].eat,jsxel.color[user[0].color])
+		jsxel.text(150,30,user[1].eat,jsxel.color[user[1].color])
+		jsxel.text(200,30,user[2].eat,jsxel.color[user[2].color])
+		jsxel.text(250,30,x,jsxel.color[1])
+		jsxel.text(300,30,y,jsxel.color[1])
 	}
 	jsxel.run(draw);
 };
