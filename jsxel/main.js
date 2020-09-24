@@ -1,11 +1,11 @@
-w = 160;
+w = 80;
 h = 120;
 x = 0;
 y = 0;
 p1 = f(w,h,10000,1000);
-user = [{'name':'u1','x':50,'y':55,'zt':1,'color':8,'eat':0},
-{'name':'u2','x':55,'y':50,'zt':1,'color':4,'eat':0},
-{'name':'u3','x':50,'y':60,'zt':1,'color':5,'eat':0}]
+user = [{'name':'u1','x':20,'y':25,'zt':1,'color':8,'eat':0},
+{'name':'u2','x':25,'y':20,'zt':1,'color':4,'eat':0},
+{'name':'u3','x':20,'y':20,'zt':1,'color':5,'eat':0}]
 
 function f(w,h,s,e){
 	var point = [];
@@ -84,12 +84,12 @@ function move(p1,user){
 window.onload = function(){
 	jsxel.init(w,h,5);
 	jsxel.touchstart(function(){
-		x = jsxel.e.touches[0].clientX;
-		y = jsxel.e.touches[0].clientY;
+		x = Math.floor(jsxel.e.touches[0].clientX);
+		y = Math.floor(jsxel.e.touches[0].clientY);
 	});
 	jsxel.touchmove(function(){
-		x = jsxel.e.touches[0].clientX;
-		y = jsxel.e.touches[0].clientY;
+		x = Math.floor(jsxel.e.touches[0].clientX);
+		y = Math.floor(jsxel.e.touches[0].clientY);
 	});
 	function draw(){
 		jsxel.cls("#ffffff");
