@@ -51,4 +51,22 @@ jsxel = {
 			jsxel.frame_count++;
 		},100);
 	},
+
+	touchstart: function(f){
+		c.addEventListener("touchstart", function(e){
+			f();
+		});
+	},
+
+	touchmove: function(f){
+		c.addEventListener("touchmove", function(e){
+			f();
+		});
+	},
+
+	touchend: function(f){
+		c.addEventListener("touchend", function(e){
+			f();
+		});
+	},
 };

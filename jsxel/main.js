@@ -81,6 +81,7 @@ function move(p1,user){
 
 window.onload = function(){
 	jsxel.init(w,h,5);
+	jsxel.touchstart(function(){alert("ok")});
 	function draw(){
 		jsxel.cls("#ffffff");
 		move(p1,user);
