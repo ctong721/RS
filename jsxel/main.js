@@ -1,5 +1,7 @@
 w = 160;
 h = 120;
+x = 0;
+y = 0;
 p1 = f(w,h,10000,1000);
 user = [{'name':'u1','x':50,'y':55,'zt':1,'color':8,'eat':0},
 {'name':'u2','x':55,'y':50,'zt':1,'color':4,'eat':0},
@@ -81,7 +83,14 @@ function move(p1,user){
 
 window.onload = function(){
 	jsxel.init(w,h,5);
-	jsxel.touchstart(function(){alert("ok")});
+	jsxel.touchstart(function(){
+		x = jsxel.e.touches[0].clientX;
+		y = jsxel.e.touches[0].clientY;
+	});
+	jsxel.touchmove(function(){
+		x = jsxel.e.touches[0].clientX;
+		y = jsxel.e.touches[0].clientY;
+	});
 	function draw(){
 		jsxel.cls("#ffffff");
 		move(p1,user);
@@ -99,6 +108,8 @@ window.onload = function(){
 		jsxel.text(120,30,user[0].eat,jsxel.color[user[0].color])
 		jsxel.text(170,30,user[1].eat,jsxel.color[user[1].color])
 		jsxel.text(220,30,user[2].eat,jsxel.color[user[2].color])
+		jsxel.text(270,30,x,jsxel.color[1])
+		jsxel.text(320,30,y,jsxel.color[1])
 	}
 	jsxel.run(draw);
 };

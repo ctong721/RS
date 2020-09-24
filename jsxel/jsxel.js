@@ -6,6 +6,8 @@ jsxel = {
 	size: 5,
 	
 	frame_count: 0,
+	
+	e: null,
 
 	random: function(start,end){
 		var temp = start - end + 1;
@@ -54,18 +56,21 @@ jsxel = {
 
 	touchstart: function(f){
 		c.addEventListener("touchstart", function(e){
+			jsxel.e = e || event;
 			f();
 		});
 	},
 
 	touchmove: function(f){
 		c.addEventListener("touchmove", function(e){
+			jsxel.e = e || event;
 			f();
 		});
 	},
 
 	touchend: function(f){
 		c.addEventListener("touchend", function(e){
+			jsxel.e = e || event;
 			f();
 		});
 	},
